@@ -6,44 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="img/favicon.ico">
+    <script src="js/login.js"></script>
     
     <title>OompaLupi</title>
 </head>
 <body>
-    <header>
-        <nav class="menu01">
-            <div class="logo">
-                <img class="img_logo" src="img/logo.png" alt="">
-            </div>
-            <div class="busca">
-                <input placeholder="Search Something" type="text">
-            </div>
-            <div class="itens_menu01">
-                <ul>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                    <li><a href="#">ENCONTRE UMA LOJA</a></li>
-                    <li><a href="#">CONTATO</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main class="col-100 menu-urls">
-        <div class="header-2">
-            <div class="menu02">
-                <img class="img_hamburger" src="img/Hamburger.png" alt="">
-                <h3>TODOS OS PRODUTOS</h3>
-                <div class="itens_menu02">
-                    <ul>
-                        <li><a href="#">TIPOS DE CHOCOLATE</a></li>
-                        <li><a href="#">CATEGORIAS</a></li>
-                        <li><a href="#">PÁSCOA</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-    <figure>
-        <img class="img_topo" src="img/banner.png" alt="">
-    </figure>
+
+    <div id="demo">
+        <h2>Login</h2>
+            <form id="login-form">
+                <p>
+                <input type="text" id="nome" name="nome" placeholder="Usário" required><i class="validation"><span></span><span></span></i>
+                </p>
+                <p>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required><i class="validation"><span></span><span></span></i>
+                </p>
+                <p>
+                <button type="submit" onclick="logar()">Logar</button>
+                </p>
+            </form>
+            <div id="create-account-wrap">
+                 <p>Não é um membro? <a href="#">Crie uma conta</a><p>
+            </div><!--create-account-wrap-->
+    </div><!--login-form-wrap-->
+      <!-- partial -->
+
 </body>
 </html>
