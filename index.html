@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="img/favicon.ico">
     <script src="js/login.js"></script>
     
     <title>OompaLupi</title>
@@ -15,23 +14,42 @@
 <body>
 
     <div id="demo">
-        <h2>Login</h2>
-            <form id="login-form">
-                <p>
-                <input type="text" id="nome" name="nome" placeholder="Usário" required><i class="validation"><span></span><span></span></i>
-                </p>
-                <p>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required><i class="validation"><span></span><span></span></i>
-                </p>
-                <p>
-                <button type="submit" onclick="logar()">Logar</button>
-                </p>
-            </form>
-            <div id="create-account-wrap">
-                 <p>Não é um membro? <a href="#">Crie uma conta</a><p>
-            </div><!--create-account-wrap-->
-    </div><!--login-form-wrap-->
-      <!-- partial -->
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <div class="login__field">
+                        <img class="login__icon fas fa-user" src="img/user-solid.svg" alt="">
+                        <input id="nome" type="text" class="login__input" placeholder="Username">
+                    </div>
+                    <div class="login__field">
+                        <img class="login__icon fas fa-lock" src="img/lock-solid.svg" alt="">
+                        <input id="senha" type="password" class="login__input" placeholder="Senha">
+                    </div>
+                    <button onclick="logar()" class="button login__submit">
+                        <span class="button__text">Log in</span>
+                        <img class="button__icon fas fa-chevron-right" src="img/right-to-bracket-solid.svg" alt="">
+                    </button>		
+                    <button onclick="teste()" class="button login__submit">
+                        <span class="button__text">LocalStorage</span>
+                    </button>			
+                </form>
+                <div class="social-login">
+                    <h3>Log in via</h3>
+                    <div class="social-icons">
+                        <img class="social-login__icon fab fa-instagram" src="img/instagram.svg" alt="">
+                        <img class="social-login__icon fab fa-facebook" src="img/facebook.svg" alt="">
+                        <img class="social-login__icon fab fa-twitter" src="img/twitter.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
 
 </body>
 </html>

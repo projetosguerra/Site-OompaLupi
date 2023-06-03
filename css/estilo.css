@@ -205,6 +205,7 @@ figure {
 .img_cont:hover {
     box-shadow: 0px 5px 10px #444444;
 -webkit-transition:  box-shadow .3s ease-in;
+    cursor: pointer;
 }
 
 footer {

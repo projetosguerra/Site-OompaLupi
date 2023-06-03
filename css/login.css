@@ -1,162 +1,211 @@
 /* ----------->  LOGIN  <-----------*/
 
-h2 {
-    text-align: center;
-    font-size: 2em;
-  }
-  
-  p {
-    position: relative;
-  }
-  
-  a,
-  a:link,
-  a:visited,
-  a:active {
-    color: #3ca9e2;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  a:focus, a:hover,
-  a:link:focus,
-  a:link:hover,
-  a:visited:focus,
-  a:visited:hover,
-  a:active:focus,
-  a:active:hover {
-    color: #329dd5;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  
-  #demo {
-    background-color: #fff;
-    width: 35%;
-    margin: 30px auto;
-    margin-top: 12%;
-    text-align: center;
-    padding: 3%;
-    border-radius: 4px;
-    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  #login-form {
-    padding: 5%;
-  }
-  
-  input {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    outline: none;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 4px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0 0 0 10px;
-    margin-bottom: 2%;
-    color: #8a8b8e;
-    border: 1px solid #c2c0ca;
-    font-style: normal;
-    font-size: 16px;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    position: relative;
-    display: inline-block;
-    background: none;
-  }
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    border-color: #3ca9e2;
-  }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
 
-  input[type="text"]:focus:invalid,
-  input[type="password"]:focus:invalid {
-    color: #cc1e2b;
-    border-color: #cc1e2b;
-  }
+body {
+	background: linear-gradient(90deg, #116072, #0A3C47);		
+}
 
-  input[type="text"]:valid ~ .validation,
-  input[type="password"]:valid ~ .validation {
-    display: block;
-    border-color: #0C0;
-  }
+#demo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
 
-  input[type="text"]:valid ~ .validation span,
-  input[type="password"]:valid ~ .validation span {
-    background: #0C0;
-    position: absolute;
-    border-radius: 6px;
-  }
+.screen {		
+	background: linear-gradient(90deg, #0A3C47, #0A3C47);		
+	position: relative;	
+	height: 600px;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #AC6C45;
+}
 
-  input[type="text"]:valid ~ .validation span:first-child,
-  input[type="password"]:valid ~ .validation span:first-child {
-    top: 30px;
-    left: 14px;
-    width: 20px;
-    height: 3px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
 
-  input[type="text"]:valid ~ .validation span:last-child,
-  input[type="password"]:valid ~ .validation span:last-child {
-    top: 35px;
-    left: 8px;
-    width: 11px;
-    height: 3px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  
-  .validation {
-    display: none;
-    position: absolute;
-    content: " ";
-    height: 60px;
-    width: 30px;
-    right: 15px;
-    top: 0px;
-  }
-  
-  button {
-    border: none;
-    border-radius: 4px;
-    display: block;
-    background-color: #3ca9e2;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    font-size: 18px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 3%;
-    padding: 3%;
-    width: 100%;
-  }
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
 
-  button:hover {
-    background-color: #329dd5;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  
-  #create-account-wrap {
-    background-color: #eeedf1;
-    color: #8a8b8e;
-    font-size: 14px;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 0 0 4px 4px;
-  }
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: linear-gradient(270deg, #AC6C45, #ca865c);	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #AC6C45, #ca865c);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #AC6C45;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #AC6C45;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #0A3C47;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #0A3C47;
+	box-shadow: 0px 2px 2px #0A3C47;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #0A3C47;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: 2%;
+	color: #0A3C47;
+}
+
+span {
+	padding-left: 5%;
+}
+
+.fa-instagram {
+	width: 25%;
+}
+
+.fa-facebook {
+	width: 25%;
+}
+
+.fa-twitter {
+	width: 25%;
+}
+
+.fa-user {
+	width: 4%;
+	margin-left: 5%;
+}
+
+.fa-lock {
+	width: 4%;
+	margin-left: 5%;
+}
+
+.fa-chevron-right {
+	width: 4%;
+	margin-left: 70%;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px #0A3C47;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
