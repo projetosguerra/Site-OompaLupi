@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="img/favicon.ico">
+    <script src="js/main.js"></script>
+    <title>OompaLupi</title>
+</head>
+<body onload="carregarCarrinho()">
+    <header>
+        <nav class="menu01">
+            <div class="logo">
+                <img class="img_logo" src="img/logo.png" alt="">
+            </div>
+            <div class="busca">
+                <input placeholder="Search Something" type="text">
+            </div>
+            <div class="itens_menu01">
+                <ul>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">ENCONTRE UMA LOJA</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="col-100 menu-urls">
+        <div class="header-2">
+            <div class="menu02">
+                <img class="img_hamburger" src="img/Hamburger.png" alt="">
+                <h3>TODOS OS PRODUTOS</h3>
+                <div class="itens_menu02">
+                    <ul>
+                        <li><a href="#">TIPOS DE CHOCOLATE</a></li>
+                        <li><a href="#">CATEGORIAS</a></li>
+                        <li><a href="carrinho.html">CARRINHO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container-table">
+        <h1>Meu Carrinho</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Produto</th>
+                    <th>Preço Unitário</th>
+                    <th>Quantidade</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="itens-carrinho">
+                <!-- os itens do carrinho serão adicionados aqui pela função carregarCarrinho() -->
+                <tr>
+                    <td>Produto 1</td>
+                    <td>R$ 10,00</td>
+                    <td>2</td>
+                    <td>R$ 20,00</td>
+                </tr>
+                <tr>
+                    <td>Produto 2</td>
+                    <td>R$ 20,00</td>
+                    <td>1</td>
+                    <td>R$ 20,00</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total:</td>
+                    <td>R$ 40,00</td>
+                </tr>
+                <tr colspan="2" id="total-carrinho">Total: R$ 0,00</tr>
+                <tr><button onclick="limparCarrinho()">Limpar Carrinho</button></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

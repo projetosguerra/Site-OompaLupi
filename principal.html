@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="img/favicon.ico">
+    <script src="js/main.js"></script>
     <title>OompaLupi</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
                     <ul>
                         <li><a href="#">TIPOS DE CHOCOLATE</a></li>
                         <li><a href="#">CATEGORIAS</a></li>
-                        <li><a href="#">PÁSCOA</a></li>
+                        <li><a href="carrinho.html">CARRINHO</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,23 +52,62 @@
             </figure>
         </div>
     <div class="container">
-        <figure class="col-25 product_img">
-            <img class="img_cont" src="img/Group 10.png" alt="">
-        </figure>
-        <figure class="col-25 product_img">
-            <img class="img_cont" src="img/Group 11.png" alt="">
-        </figure>
-        <figure class="col-25 product_img">
-            <img class="img_cont" src="img/Group 12.png" alt="">
-        </figure>
-        <figure class="col-25 product_img">
-            <img class="img_cont" src="img/Group 13.png" alt="">
-        </figure>
+        <div class="card col-25">
+            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
+            <h2>Nome do Produto</h2>
+            <p>Descrição breve do produto.</p>
+            <p class="price">R$ 10.00</p>
+            <button onclick="adicionarAoCarrinho('Produto 1', 10)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card col-25">
+            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
+            <h2>Nome do Produto</h2>
+            <p>Descrição breve do produto.</p>
+            <p class="price">R$ 10.00</p>
+            <button onclick="adicionarAoCarrinho('Produto 2', 20)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card col-25">
+            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
+            <h2>Nome do Produto</h2>
+            <p>Descrição breve do produto.</p>
+            <p class="price">R$ 10.00</p>
+            <button onclick="adicionarAoCarrinho('Produto 3', 30)">Adicionar ao carrinho</button>
+        </div>
     </div>
+    <div class="container-2">
+        <div class="card col-25">
+            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
+            <h2>Nome do Produto</h2>
+            <p>Descrição breve do produto.</p>
+            <p class="price">R$ 10.00</p>
+            <button onclick="adicionarAoCarrinho('Produto 4', 40)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card col-25">
+            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
+            <h2>Nome do Produto</h2>
+            <p>Descrição breve do produto.</p>
+            <p class="price">R$ 10.00</p>
+            <button onclick="adicionarAoCarrinho('Produto 5', 50)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card col-25">
+            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
+            <h2>Nome do Produto</h2>
+            <p>Descrição breve do produto.</p>
+            <p class="price">R$ 10.00</p>
+            <button onclick="adicionarAoCarrinho('Produto 6', 60)">Adicionar ao carrinho</button>
+        </div>
+
+    </div>
+
     <footer>
         <figure class="img-footer">
             <img class="ajust-ft" src="img/Footer.png" alt="">
         </figure>
     </footer>
+
 </body>
 </html>

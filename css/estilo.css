@@ -87,7 +87,8 @@ nav {
     width: 100%;
     float: left;
     position: absolute;
-    height: 9%;
+    height: 1vh;
+    padding-top: 5%;
 }
 
 .header-2 {
@@ -100,7 +101,6 @@ nav {
 
 .img_hamburger {
     float: left;
-    margin-top: 5.5%;
     margin-left: 3%;
     margin-right: 3%;
     display: flex;
@@ -109,23 +109,20 @@ nav {
 .menu02 h3 {
     float: left;
     display: flex;
-    margin-top: 5.8%;
     color: #fff;
     margin-right: 30%;
 }
 
 .itens_menu02 {
     padding: 1%;
+    float: right;
 }
 
 .itens_menu02 li {
-    float: left;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    display: block;
-    margin-top: 5%;
-    margin-left: 7%;
+    display: inline-block;
+    margin-right: 7em;
 }
 
 .itens_menu02 li a {
@@ -137,6 +134,16 @@ nav {
 
 h3 {
     font-weight: normal!important;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
 }
 
 figure {
@@ -152,6 +159,24 @@ figure {
 .container {
     width: 90%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container-2 {
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-table {
+    width: 90%;
+    margin: auto;
+}
+
+.container-table h1 {
 }
 
 .login {
@@ -204,7 +229,7 @@ figure {
 
 .img_cont:hover {
     box-shadow: 0px 5px 10px #444444;
--webkit-transition:  box-shadow .3s ease-in;
+    -webkit-transition:  box-shadow .3s ease-in;
     cursor: pointer;
 }
 
@@ -223,6 +248,70 @@ footer {
     margin-bottom: -1%;
 }
 
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+  
+.card img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
+    border-radius: 12px; 
+    margin-bottom: 10px;
+}
+  
+.card h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+  
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+  
+.card .price {
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.card button:hover {
+    background-color: #3e8e41;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 10px #444444;
+    -webkit-transition:  box-shadow .3s ease-in;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+  
 @media screen and (max-width: 1400px) {
     
     
@@ -307,7 +396,8 @@ footer {
         width: 100%;
         float: left;
         position: absolute;
-        height: 11%;
+        height: 1vh;
+        padding-top: 7%;
     }
     
     .header-2 {
@@ -423,7 +513,7 @@ footer {
 
     .img_cont:hover {
         box-shadow: 0px 5px 10px #444444;
-   -webkit-transition:  box-shadow .3s ease-in;
+        -webkit-transition:  box-shadow .3s ease-in;
     }
 
     footer {
@@ -440,6 +530,66 @@ footer {
         margin-top: 5%;
         margin-bottom: -1%;
     }
+
+    .card {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        margin: 0 30px;
+      }
+      
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      
+      .card h2 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+      
+      .card p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      
+      .card .price {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      .card button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .card button:hover {
+        background-color: #3e8e41;
+      }
+
+      .card:hover {
+        box-shadow: 0px 5px 10px #444444;
+        -webkit-transition:  box-shadow .3s ease-in;
+        cursor: pointer;
+      }
+
+      label {
+        margin: 3%;
+      }
+
+      .container-table {
+        
+      }
+      
     
 }
 

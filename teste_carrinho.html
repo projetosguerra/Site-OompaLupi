@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minha Loja</title>
+    <script>
+        // função para adicionar um produto ao carrinho
+        function adicionarAoCarrinho(nomeProduto, precoProduto) {
+            // busca o carrinho no Local Storage ou cria um novo objeto vazio
+            var carrinho = JSON.parse(localStorage.getItem("carrinho") || "{}");
+            // verifica se o produto já existe no carrinho
+            if (carrinho[nomeProduto]) {
+                // se sim, incrementa a quantidade
+                carrinho[nomeProduto].quantidade++;
+            } else {
+                // se não, adiciona o produto com a quantidade 1
+                carrinho[nomeProduto] = {preco: precoProduto, quantidade: 1};
+            }
+            // salva o carrinho atualizado no Local Storage
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            alert("O produto " + nomeProduto + " foi adicionado ao seu carrinho!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Minha Loja Online</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Produto 1</td>
+                <td>R$ 10,00</td>
+                <td><button onclick="adicionarAoCarrinho('Produto 1', 10)">Adicionar ao carrinho</button></td>
+            </tr>
+            <tr>
+                <td>Produto 2</td>
+                <td>R$ 20,00</td>
+                <td><button onclick="adicionarAoCarrinho('Produto 2', 20)">Adicionar ao carrinho</button></td>
+            </tr>
+            <tr>
+                <td>Produto 3</td>
+                <td>R$ 30,00</td>
+                <td><button onclick="adicionarAoCarrinho('Produto 3', 30)">Adicionar ao carrinho</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="carrinho.html">Carrinho</a>
+</body>
+</html>
