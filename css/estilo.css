@@ -79,8 +79,7 @@ nav {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #fff;
-    
+    color: #fff;   
 }
 
 .col-100 {
@@ -104,6 +103,7 @@ nav {
     margin-left: 3%;
     margin-right: 3%;
     display: flex;
+    margin-top: 0.7%;
 }
 
 .menu02 h3 {
@@ -111,6 +111,7 @@ nav {
     display: flex;
     color: #fff;
     margin-right: 30%;
+    margin-top: 1%;
 }
 
 .itens_menu02 {
@@ -157,26 +158,25 @@ figure {
 }
 
 .container {
-    width: 90%;
+    width: 60%;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
 .container-2 {
-    width: 90%;
+    width: 60%;
     margin: auto;
     margin-top: 3%;
     display: flex;
     justify-content: center;
+    margin-bottom: 3%;
 }
 
-.container-table {
-    width: 90%;
+.container-f {
+    width: 80%;
     margin: auto;
-}
-
-.container-table h1 {
+    justify-content: center;
 }
 
 .login {
@@ -234,13 +234,69 @@ figure {
 }
 
 footer {
-    width: 100%;
-    margin-bottom: -10%;
-}
-
-.img-footer {
-    width: 100%;
-}
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+  }
+  
+  footer h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  footer p {
+    color: #fff;
+    line-height: 1.8em;
+  }
+  
+  footer a {
+    color: #0088cc;
+  }
+  
+  .social-network {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2%;
+  }
+  
+  .social-network li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .social-network li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-network li a:hover i {
+    color: #fff;
+    background-color:#0088cc;
+  }
+  
+  .social-network li a i {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    color: #0088cc;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+  }
+  
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
 .ajust-ft {
     width: 100%;
@@ -249,37 +305,37 @@ footer {
 }
 
 .card {
-    width: 300px;
+    width: 70%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
-}
+    margin: 0 30px;
+  }
   
-.card img {
+  .card img {
     width: 100%;
     height: auto;
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
-    border-radius: 12px; 
+    border-radius: 5px;
     margin-bottom: 10px;
-}
+  }
   
-.card h2 {
+  .card h2 {
     font-size: 24px;
     margin-top: 0;
-}
+  }
   
-.card p {
+  .card p {
     font-size: 16px;
     margin-bottom: 10px;
-}
+  }
   
-.card .price {
+  .card .price {
     font-size: 20px;
     font-weight: bold;
-}
+  }
   
-.card button {
+  .card button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -287,30 +343,197 @@ footer {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+  }
   
-.card button:hover {
+  .card button:hover {
     background-color: #3e8e41;
-}
+  }
 
-.card:hover {
+  .card:hover {
     box-shadow: 0px 5px 10px #444444;
     -webkit-transition:  box-shadow .3s ease-in;
     cursor: pointer;
+  }
+
+  label {
+    margin: 3%;
+  }
+
+  .container-table {
+    width: 80%;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 20em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    margin-bottom: 7%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 1%;
+    border-bottom: 0.2% solid #eee;
+    text-align: left;
+  }
+
+  th:first-of-type,
+  td:first-of-type {
+    width: 60%;
+  }
+
+  th:nth-of-type(2),
+  td:nth-of-type(2) {
+    width: 20%;
+  }
+
+  th:last-of-type,
+  td:last-of-type {
+    width: 20%;
+    text-align: right;
+  }
+
+  tfoot tr:first-of-type {
+    border-top: 0.2% solid #eee;
+  }
+
+  td[colspan="2"] {
+    text-align: left;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+  /* CSS para animação */
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+  }
+
+  .cupom-desconto label {
+    font-weight: bold;
+  }
+
+  .cupom-desconto input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+  }
+
+  .formas-pagamento li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  .formas-pagamento input[type="radio"] {
+    margin-right: 10px;
+  }
+
+.cupom-desconto {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+.cupom-input {
+    display: flex;
 }
-th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+
+#cupom {
+    margin-right: 8px;
 }
-th {
+
+.btn-cupom {
+    margin-left: 8px;
+    padding: 4%;
+}
+
+.formas-pagamento h4 {
+    font-size: 1.2em;
+    margin-bottom: 7%;
+} 
+
+.filtros {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    margin: 2%;
+    margin-left: 10%;
+  }
+  
+  .filtros select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background-color: #f2f2f2;
-}
+    border: 1px solid #ddd;
+    padding: 5%;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  /* Estilo do hover */
+  .filtros select:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Estilo do foco */
+  .filtros select:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102,175,233,.6);
+  }
+  
+  /* Estilo da seta */
+  .filtros::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+  }
+  
   
 @media screen and (max-width: 1400px) {
     
@@ -391,6 +614,28 @@ th {
         color: #fff;
         
     }
+
+    .container {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-2 {
+        width: 70%;
+        margin: auto;
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3%;
+    }
+    
+    .container-f {
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+    }
     
     .col-100 {
         width: 100%;
@@ -407,43 +652,34 @@ th {
         width: 90%;
         margin-left: 2%;
     }
-
-    .menu02 {
-        margin-top: 0.7%;
-    }
     
     .img_hamburger {
         float: left;
-        margin-top: 5.5%;
         margin-left: 3%;
         margin-right: 3%;
         display: flex;
+        margin-top: -0.3em;
     }
     
     .menu02 h3 {
         float: left;
         display: flex;
-        margin-top: 5.8%;
         color: #fff;
         margin-right: 30%;
+        margin-top: -0.1%;
     }
     
     .itens_menu02 {
-        padding: 1%;
+        margin-top: -1.6em;
+        float: right;
     }
     
     .itens_menu02 li {
-        float: left;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        display: block;
-        margin-top: 5%;
-        margin-left: 5%;
+        display: inline-block;
+        margin-right: 5em;
     }
     
     .itens_menu02 li a {
-        display: block;
         text-align: center;
         text-decoration: none;
         color: #000;
@@ -517,13 +753,69 @@ th {
     }
 
     footer {
-        width: 100%;
-        margin-bottom: -10%;
-    }
-
-    .img-footer {
-        width: 100%;
-    }
+        background-color: #222;
+        color: #fff;
+        padding: 40px 0;
+        font-size: 14px;
+      }
+      
+      footer h3 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      
+      footer p {
+        color: #fff;
+        line-height: 1.8em;
+      }
+      
+      footer a {
+        color: #0088cc;
+      }
+      
+      .social-network {
+        display: inline-block;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 2%;
+      }
+      
+      .social-network li {
+        display: inline;
+        margin-right: 10px;
+      }
+      
+      .social-network li:last-child {
+        margin-right: 0;
+      }
+      
+      .social-network li a:hover i {
+        color: #fff;
+        background-color:#0088cc;
+      }
+      
+      .social-network li a i {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        color: #0088cc;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+      }
+      
+      .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
     .ajust-ft {
         width: 100%;
@@ -532,7 +824,7 @@ th {
     }
 
     .card {
-        width: 300px;
+        width: 70%;
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
@@ -587,11 +879,189 @@ th {
       }
 
       .container-table {
-        
+        width: 80%;
+        max-width: 100%;
+        margin: auto;
+        padding-top: 15em;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        margin-bottom: 7%;
       }
-      
     
+      h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2%;
+      }
+    
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    
+      th,
+      td {
+        padding: 1%;
+        border-bottom: 0.2% solid #eee;
+        text-align: left;
+      }
+    
+      th:first-of-type,
+      td:first-of-type {
+        width: 60%;
+      }
+    
+      th:nth-of-type(2),
+      td:nth-of-type(2) {
+        width: 20%;
+      }
+    
+      th:last-of-type,
+      td:last-of-type {
+        width: 20%;
+        text-align: right;
+      }
+    
+      tfoot tr:first-of-type {
+        border-top: 0.2% solid #eee;
+      }
+    
+      td[colspan="2"] {
+        text-align: left;
+        font-weight: bold;
+      }
+    
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 7%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      button:hover {
+        background-color: #3e8e41;
+      }
+    
+      /* CSS para animação */
+      .fade-in {
+        animation: fadeIn 0.5s ease-out;
+      }
+    
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .carrinho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+      }
+    
+      .cupom-desconto label {
+        font-weight: bold;
+
+      }
+    
+      .cupom-desconto input[type="text"] {
+        margin-right: 10px;
+        padding: 5px;
+      }
+    
+      .formas-pagamento li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+    
+      .formas-pagamento input[type="radio"] {
+        margin-right: 10px;
+      }
+
+    .cupom-desconto {
+        display: flex;
+        align-items: center;
+    }
+    
+    .cupom-input {
+        display: flex;
+    }
+    
+    #cupom {
+        margin-right: 8px;
+    }
+    
+    .btn-cupom {
+        margin-left: 8px;
+        padding: 4%;
+    }
+
+    .formas-pagamento h4 {
+        font-size: 1.2em;
+        margin-bottom: 7%;
+
+    } 
+      
 }
+
+@media (max-width: 768px) {
+    .cart-table tbody tr td:nth-child(1):before {
+      content: "Product";
+    }
+    
+    .cart-table tbody tr td:nth-child(2):before {
+      content: "Price";
+    }
+    
+    .cart-table tbody tr td:nth-child(3):before {
+      content: "Quantity";
+    }
+    
+    .cart-table tbody tr td:nth-child(4):before {
+      content: "Total";
+    }
+  
+    /* Hide table headers */
+    .cart-table thead {
+      display: none;
+    }
+  
+    /* Display block for rows with data */
+    .cart-table tbody tr {
+      display: block;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    /* Display table cells as block elements */
+    .cart-table tbody tr td {
+      display: block;
+      text-align: center;
+    }
+  
+    .cart-table tbody tr td:before {
+      display: inline-block;
+      font-weight: bold;
+      width: 40%;
+      margin-right: 10px;
+      text-align: left;
+    }
+  
+    /* Set background color of each row */
+    .cart-table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  }
+  
 
 
 

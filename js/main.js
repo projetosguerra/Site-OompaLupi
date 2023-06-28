@@ -36,8 +36,21 @@ function adicionarAoCarrinho(nomeProduto, price){
             alert("O produto " + nomeProduto + " foi adicionado ao seu carrinho!");
         }
 
-        // função para carregar os dados do carrinho
+        // função para atualizar a quantidade de um item no carrinho
+        function atualizarQuantidade(nome, quantidade) {
+            // busca o carrinho no Local Storage
+            var carrinho = JSON.parse(localStorage.getItem("carrinho"));
+            // atualiza a quantidade para este item
+            carrinho[nome].quantidade = parseInt(quantidade);
+            // salva o carrinho atualizado no Local Storage
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            // recarrega a página do carrinho
+            carregarCarrinho();
+        }
+
+        // Função para carregar os itens do carrinho
         function carregarCarrinho() {
+            // Código para carregar itens aqui
             var carrinho = JSON.parse(localStorage.getItem("carrinho") || "{}");
             // seleciona a tabela do carrinho
             var tbody = document.getElementById("itens-carrinho");
@@ -60,26 +73,62 @@ function adicionarAoCarrinho(nomeProduto, price){
             }
             // atualiza o valor total da compra
             document.getElementById("total-carrinho").innerHTML = "Total: R$ " + total.toFixed(2);
+
+            // Adiciona a classe de animação aos elementos da tabela
+            const elementosTabela = document.querySelectorAll("#itens-carrinho tr");
+            elementosTabela.forEach((elemento) => elemento.classList.add("fade-in"));
         }
 
-        // função para atualizar a quantidade de um item no carrinho
-        function atualizarQuantidade(nome, quantidade) {
-            // busca o carrinho no Local Storage
-            var carrinho = JSON.parse(localStorage.getItem("carrinho"));
-            // atualiza a quantidade para este item
-            carrinho[nome].quantidade = parseInt(quantidade);
-            // salva o carrinho atualizado no Local Storage
-            localStorage.setItem("carrinho", JSON.stringify(carrinho));
-            // recarrega a página do carrinho
-            carregarCarrinho();
-        }
-
-        // função para limpar todo o carrinho
-        function limparCarrinho() {
+            // Função para limpar o carrinho
+            function limparCarrinho() {
+            // Código para limpar o carrinho aqui
             localStorage.removeItem("carrinho");
             // recarrega a página do carrinho
             location.reload();
+
+            // Remove todos os elementos filhos da tabela (exceto o footer)
+            const tbody = document.getElementById("itens-carrinho");
+            while (tbody.firstChild && tbody.firstChild.tagName !== "TR") {
+            tbody.removeChild(tbody.firstChild);
+            }
+
+            // Atualiza o total do carrinho
+            const total = document.getElementById("total-carrinho");
+            total.innerHTML = "Total: R$ 0,00";
         }
+
+        function aplicarDesconto() {
+        var cupomInput = document.getElementById("cupom");
+        var cupom = cupomInput.value;
+        var valorTotalElement = document.getElementById("total-carrinho");
+        var valorTotal = parseFloat(valorTotalElement.innerText.replace("Total: R$ ", ""));
+        if (cupom === "EtecMCM") {
+            var desconto = valorTotal * 0.1;
+            var novoValorTotal = valorTotal - desconto;
+            valorTotalElement.innerText = "Total: R$" + novoValorTotal.toFixed(2);
+            cupomInput.disabled = true;
+        } else {
+            alert("Cupom inválido!");
+        }
+        }
+        
+        function finalizarPagamento() {
+            var formaPagamento = document.querySelector('input[name="pagamento"]:checked');
+            if (formaPagamento) {
+              // Armazenar dados do carrinho no LocalStorage
+              localStorage.setItem("formaPagamento", formaPagamento.value);
+        
+              // Redirecionar para a página de finalização de pagamento
+              window.location.href = "pagina-finalizacao-pagamento.html";
+            } else {
+              alert("Por favor, selecione uma forma de pagamento!");
+            }
+        }
+
+        document.getElementById("filtro").addEventListener("change", function() {
+            this.classList.add("animar");
+          });
+          
 
 
 

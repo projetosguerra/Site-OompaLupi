@@ -21,7 +21,7 @@
             </div>
             <div class="itens_menu01">
                 <ul>
-                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">PRODUTOS</a></li>
                     <li><a href="#">ENCONTRE UMA LOJA</a></li>
                     <li><a href="#">CONTATO</a></li>
                 </ul>
@@ -46,68 +46,107 @@
     <figure>
         <img class="img_topo" src="img/banner.png" alt="">
     </figure>
-        <div class="bottom_banner">
-            <figure>
-                <img class="img_ord" src="img/Group 9.png" alt="">
-            </figure>
-        </div>
+    <div class="filtros">
+        <label for="filtro">Filtros:</label>
+        <select id="filtro">
+            <option value="chocolates">Chocolates</option>
+            <option value="saudaveis">Saudáveis</option>
+            <option value="organicos">Orgânicos</option>
+            <option value="presentes">Presentes</option>
+            <option value="outros">Outros</option>
+        </select>
+    </div>
     <div class="container">
         <div class="card col-25">
-            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
-            <h2>Nome do Produto</h2>
-            <p>Descrição breve do produto.</p>
-            <p class="price">R$ 10.00</p>
-            <button onclick="adicionarAoCarrinho('Produto 1', 10)">Adicionar ao carrinho</button>
+            <img src="img/image 3.png" alt="Imagem do produto">
+            <h2>Seleção de bombons recheados</h2>
+            <p>485g</p>
+            <p class="price">R$ 89.90</p>
+            <button onclick="adicionarAoCarrinho('Seleção de bombons recheados', 89.90)">Adicionar ao carrinho</button>
         </div>
 
         <div class="card col-25">
-            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
-            <h2>Nome do Produto</h2>
-            <p>Descrição breve do produto.</p>
-            <p class="price">R$ 10.00</p>
-            <button onclick="adicionarAoCarrinho('Produto 2', 20)">Adicionar ao carrinho</button>
+            <img src="img/image 2.png" alt="Imagem do produto">
+            <h2>Conjunto Chocolates Dia das Mães</h2>
+            <p>525g</p>
+            <p class="price">R$ 99.90</p>
+            <button onclick="adicionarAoCarrinho('Conjunto Chocolates Dia das Mães', 99.90)">Adicionar ao carrinho</button>
         </div>
 
         <div class="card col-25">
-            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
-            <h2>Nome do Produto</h2>
-            <p>Descrição breve do produto.</p>
-            <p class="price">R$ 10.00</p>
-            <button onclick="adicionarAoCarrinho('Produto 3', 30)">Adicionar ao carrinho</button>
+            <img src="img/image 4.png" alt="Imagem do produto">
+            <h2>Chocolate Bar 70% Cacau</h2>
+            <p>200g</p>
+            <p class="price">R$ 14.90</p>
+            <button onclick="adicionarAoCarrinho('Chocolate bar 70% Cacau', 14.90)">Adicionar ao carrinho</button>
         </div>
     </div>
     <div class="container-2">
         <div class="card col-25">
-            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
-            <h2>Nome do Produto</h2>
-            <p>Descrição breve do produto.</p>
-            <p class="price">R$ 10.00</p>
-            <button onclick="adicionarAoCarrinho('Produto 4', 40)">Adicionar ao carrinho</button>
+            <img src="img/image 5.png" alt="Imagem do produto">
+            <h2>Seleção Chocolate Bars 100% Organic</h2>
+            <p>200g</p>
+            <p class="price">R$ 16.90</p>
+            <button onclick="adicionarAoCarrinho('SeleçÃo Chocolate 100% Organic', 16.90)">Adicionar ao carrinho</button>
         </div>
 
         <div class="card col-25">
-            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
-            <h2>Nome do Produto</h2>
-            <p>Descrição breve do produto.</p>
-            <p class="price">R$ 10.00</p>
-            <button onclick="adicionarAoCarrinho('Produto 5', 50)">Adicionar ao carrinho</button>
+            <img src="img/chocolate-morango.PNG" alt="Imagem do produto">
+            <h2>Strawberry Chocolate Bar</h2>
+            <p>200g</p>
+            <p class="price">R$ 14.90</p>
+            <button onclick="adicionarAoCarrinho('Strawberry Chocolat Bar', 14.90)">Adicionar ao carrinho</button>
         </div>
 
         <div class="card col-25">
-            <img src="https://via.placeholder.com/150" alt="Imagem do produto">
-            <h2>Nome do Produto</h2>
-            <p>Descrição breve do produto.</p>
-            <p class="price">R$ 10.00</p>
-            <button onclick="adicionarAoCarrinho('Produto 6', 60)">Adicionar ao carrinho</button>
+            <img src="img/chocolate-maracuja.png" alt="Imagem do produto">
+            <h2>Maracujá Chocolate Bar</h2>
+            <p>200g</p>
+            <p class="price">R$ 14.90</p>
+            <button onclick="adicionarAoCarrinho('Maracujá Chocolate Bar', 14.90)">Adicionar ao carrinho</button>
         </div>
 
     </div>
 
     <footer>
-        <figure class="img-footer">
-            <img class="ajust-ft" src="img/Footer.png" alt="">
-        </figure>
-    </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p><i class="fa fa-map-marker"></i> Rua do Capricho, 123 - Centro<br> São Paulo/SP</p>
+                    <p><i class="fa fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fa fa-envelope"></i> oompalupi@gmail.com.br</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Siga-nos</h3>
+                    <ul class="social-network social-circle">
+                        <li>
+                            <a href="#" class="icoFacebook" title="Facebook">
+                                <i class="fa fa-facebook"><img src="img/facebook.svg" alt=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="icoTwitter" title="Twitter">
+                                <i class="fa fa-twitter"><img src="img/twitter.svg" alt=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="icoInstagram" title="Instagram">
+                              <i class="fa fa-instagram">
+                                <img src="img/instagram.svg" alt="">
+                              </i>
+                            </a>
+                        </li>
+                          
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Sobre nós:</h3>
+                    <p>Nós somos a OompaLupi, uma doceria virtual que produz chocolates com embalagens biodegradáveis e supertecnológicas, na qual quando você adiquire um de nossos chocolates, você tem a possibilidade de plantar uma muda de cacau na sua casa!</p>
+                </div>
+            </div>
+        </div>
+    </footer> 
 
 </body>
 </html>

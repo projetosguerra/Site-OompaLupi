@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="img/favicon.ico">
     <script src="js/main.js"></script>
-    <title>OompaLupi</title>
+    <title>Carrinho</title>
+    <style>
+        body {
+            height: 10vh;
+        }
+    </style>
 </head>
 <body onload="carregarCarrinho()">
     <header>
@@ -21,7 +25,7 @@
             </div>
             <div class="itens_menu01">
                 <ul>
-                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="principal.html">PRODUTOS</a></li>
                     <li><a href="#">ENCONTRE UMA LOJA</a></li>
                     <li><a href="#">CONTATO</a></li>
                 </ul>
@@ -44,38 +48,136 @@
         </div>
     </main>
     <div class="container-table">
-        <h1>Meu Carrinho</h1>
-        <table>
+        <h2>Meu Carrinho</h2>
+        <table class="cart-table">
             <thead>
                 <tr>
                     <th>Nome do Produto</th>
-                    <th>Preço Unitário</th>
                     <th>Quantidade</th>
-                    <th>Subtotal</th>
+                    <th>Preço Unitário</th>
                 </tr>
             </thead>
             <tbody id="itens-carrinho">
                 <!-- os itens do carrinho serão adicionados aqui pela função carregarCarrinho() -->
                 <tr>
-                    <td>Produto 1</td>
-                    <td>R$ 10,00</td>
-                    <td>2</td>
-                    <td>R$ 20,00</td>
+                    <td data-title="Produto">Produto 1</td>
+                    <td data-title="Quantidade">1</td>
+                    <td data-title="Preço">$9,99</td>
+                    <td data-title="Imagem"><img src="img/image 3.png" alt="Produto 1"></td> <!-- Nova coluna -->
                 </tr>
                 <tr>
-                    <td>Produto 2</td>
-                    <td>R$ 20,00</td>
-                    <td>1</td>
-                    <td>R$ 20,00</td>
+                    <td data-title="Produto">Produto 2</td>
+                    <td data-title="Quantidade">1</td>
+                    <td data-title="Preço">$9,99</td>
+                    <td data-title="Imagem"><img src="img/image 2.png" alt="Produto 1"></td> <!-- Nova coluna -->
                 </tr>
                 <tr>
-                    <td colspan="3">Total:</td>
-                    <td>R$ 40,00</td>
+                    <td data-title="Produto">Produto 3</td>
+                    <td data-title="Quantidade">1</td>
+                    <td data-title="Preço">$9,99</td>
+                    <td data-title="Imagem"><img src="img/image 4.png" alt="Produto 1"></td> <!-- Nova coluna -->
                 </tr>
-                <tr colspan="2" id="total-carrinho">Total: R$ 0,00</tr>
-                <tr><button onclick="limparCarrinho()">Limpar Carrinho</button></tr>
+                <tr>
+                    <td data-title="Produto">Produto 4</td>
+                    <td data-title="Quantidade">1</td>
+                    <td data-title="Preço">$9,99</td>
+                    <td data-title="Imagem"><img src="img/image 5.png" alt="Produto 1"></td> <!-- Nova coluna -->
+                </tr>
+                <tr>
+                    <td data-title="Produto">Produto 5</td>
+                    <td data-title="Quantidade">1</td>
+                    <td data-title="Preço">$9,99</td>
+                    <td data-title="Imagem"><img src="img/chocolate-morango.png" alt="Produto 1"></td> <!-- Nova coluna -->
+                </tr>
+                <tr>
+                    <td data-title="Produto">Produto 6</td>
+                    <td data-title="Quantidade">1</td>
+                    <td data-title="Preço">$9,99</td>
+                    <td data-title="Imagem"><img src="img/chocolate-maracuja.png" alt="Produto 1"></td> <!-- Nova coluna -->
+                </tr>
+
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" id="total-carrinho">Total: R$ 0,00</td>
+                    <td><button onclick="limparCarrinho()">Limpar carrinho</button></td>
+                </tr>
+            </tfoot>
         </table>
     </div>
+    <div class="carrinho">
+        <div class="cupom-desconto">
+            <label for="cupom">Cupom de Desconto:</label>
+            <input type="text" id="cupom" name="cupom">
+            <button class="btn-cupom" onclick="aplicarDesconto()">Aplicar</button>
+        </div>
+        
+        <div class="formas-pagamento">
+            <h4>Formas de Pagamento:</h4>
+            <ul>
+                <li>
+                    <input type="radio" id="mastercard" name="pagamento" value="Mastercard">
+                    <label for="mastercard">Mastercard</label>
+                </li>
+                <li>
+                    <input type="radio" id="visa" name="pagamento" value="Visa">
+                    <label for="visa">Visa</label>
+                </li>
+                <li>
+                    <input type="radio" id="elo" name="pagamento" value="Elo">
+                    <label for="elo">Elo</label>
+                </li>
+                <li>
+                    <input type="radio" id="pix" name="pagamento" value="Pix">
+                    <label for="pix">Pix</label>
+                </li>
+                <li>
+                    <input type="radio" id="boleto" name="pagamento" value="Boleto">
+                    <label for="boleto">Boleto Bancário</label>
+                </li>
+            </ul>
+        </div>
+            <button onclick="finalizarPagamento()">Finalizar Pagamento</button>
+    </div>
+
+    <footer>
+        <div class="container-f">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p><i class="fa fa-map-marker"></i> Rua do Capricho, 123 - Centro<br> São Paulo/SP</p>
+                    <p><i class="fa fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fa fa-envelope"></i> oompalupi@gmail.com.br</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Siga-nos</h3>
+                    <ul class="social-network social-circle">
+                        <li>
+                            <a href="#" class="icoFacebook" title="Facebook">
+                                <i class="fa fa-facebook"><img src="img/facebook.svg" alt=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="icoTwitter" title="Twitter">
+                                <i class="fa fa-twitter"><img src="img/twitter.svg" alt=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="icoInstagram" title="Instagram">
+                              <i class="fa fa-instagram">
+                                <img src="img/instagram.svg" alt="">
+                              </i>
+                            </a>
+                        </li>
+                          
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Sobre nós:</h3>
+                    <p>Nós somos a OompaLupi, uma doceria virtual que produz chocolates com embalagens biodegradáveis e supertecnológicas, na qual quando você adiquire um de nossos chocolates, você tem a possibilidade de plantar uma muda de cacau na sua casa!</p>
+                </div>
+            </div>
+        </div>
+    </footer> 
 </body>
 </html>
