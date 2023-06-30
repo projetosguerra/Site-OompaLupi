@@ -1,24 +1,3 @@
-/* function calcularTotal() {
-    const qtd = document.getElementById("quantity").value;
-    const preco = document.getElementById("price").value;
-    const total = qtd * preco;
-    document.getElementById("total").innerHTML = "Total: R$" + total.toFixed(2);
-}
-
-function adicionarAoCarrinho(nomeProduto, price){
-            var carrinho = JSON.parse(localStorage.getItem("carrinho")) || {};
-            if(carrinho[nomeProduto]){
-                carrinho[nomeProduto].quantidade += 1;
-            } else {
-                carrinho[nomeProduto] = {
-                    preco: precoProduto,
-                    quantidade: 1
-                };
-            }
-            localStorage.setItem("carrinho", JSON.stringify(carrinho));
-            alert("O produto " + nomeProduto + " foi adicionado ao seu carrinho!");
-} */
-
         // função para adicionar um produto ao carrinho
         function adicionarAoCarrinho(nomeProduto, precoProduto) {
             // busca o carrinho no Local Storage ou cria um novo objeto vazio
@@ -98,18 +77,18 @@ function adicionarAoCarrinho(nomeProduto, price){
         }
 
         function aplicarDesconto() {
-        var cupomInput = document.getElementById("cupom");
-        var cupom = cupomInput.value;
-        var valorTotalElement = document.getElementById("total-carrinho");
-        var valorTotal = parseFloat(valorTotalElement.innerText.replace("Total: R$ ", ""));
-        if (cupom === "EtecMCM") {
-            var desconto = valorTotal * 0.1;
-            var novoValorTotal = valorTotal - desconto;
-            valorTotalElement.innerText = "Total: R$" + novoValorTotal.toFixed(2);
-            cupomInput.disabled = true;
-        } else {
-            alert("Cupom inválido!");
-        }
+            var cupomInput = document.getElementById("cupom");
+            var cupom = cupomInput.value;
+            var valorTotalElement = document.getElementById("total-carrinho");
+            var valorTotal = parseFloat(valorTotalElement.innerText.replace("Total: R$ ", ""));
+            if (cupom === "EtecMCM") {
+                var desconto = valorTotal * 0.1;
+                var novoValorTotal = valorTotal - desconto;
+                valorTotalElement.innerText = "Total: R$" + novoValorTotal.toFixed(2);
+                cupomInput.disabled = true;
+            } else {
+                alert("Cupom inválido!");
+            }
         }
         
         function finalizarPagamento() {
@@ -128,26 +107,3 @@ function adicionarAoCarrinho(nomeProduto, price){
         document.getElementById("filtro").addEventListener("change", function() {
             this.classList.add("animar");
           });
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*<label for="quantity">Quantidade:</label>
-            <input type="number" id="quantity" value="1">
-            onclick="calcularTotal()"*/
